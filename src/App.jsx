@@ -41,7 +41,7 @@ function App() {
         <Day className="month" key={MONTH[9]} day={MONTH[9]}/>
       </article>
       <section className="grid-7">
-        {DAY_LETTER.map((day, index) => <p key={index}>{day[0]}</p>)}
+        {DAY_LETTER.map((day, index) => <Day key={index} day={day} className="days"/>)}
       </section>
       <section className="grid-7 days">
         {ROW}
