@@ -29,10 +29,18 @@ const DAY = [
 const DAY_LETTER = DAY.map(day => day.charAt(0))
 
 function App() {
+
+  function handleClick(e){
+    document.querySelectorAll(".selected").forEach(el => {
+      el.classList.remove("selected")
+    })
+    e.target.classList.add("selected")
+  }
+
   const ROW = []
 
   for(let i=1; i<=31; i++){
-    ROW.push(<Day className="backgroundOrange" key={i} day={i}/>)
+    ROW.push(<Day className="backgroundOrange" key={i} day={i} onClick={handleClick}/>)
   }
 
   return (

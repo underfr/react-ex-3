@@ -1,6 +1,6 @@
-export default function Day({day, className}){
+export default function Day({day, className, onClick}){
     return (
-        <div className={className}>
+        <div className={className} onClick={onClick}>
             {day}
         </div>
     )
