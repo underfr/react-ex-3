@@ -97,7 +97,7 @@ function App() {
       />,
     );
   }
-console.log(eventList)
+
   return (
     <div className="App">
       <div className="calendarApp">
@@ -120,7 +120,7 @@ console.log(eventList)
           .filter((e) => e.confirmed)
           .map((e, index) => (
             <p key={index}>
-              {e.nom} - {e.lieu} : {e.index} {MONTH[9]} {e.heure}
+              {e.nom} - {e.lieu} : {e.index+1} {MONTH[9]} {e.heure}
             </p>
           ))}
           
