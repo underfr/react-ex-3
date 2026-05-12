@@ -1,5 +1,6 @@
 import "./App.css";
 import Day from "./Day";
+import FormCalendar from "./FormCalendar"
 
 const MONTH = [
   "Janvier",
@@ -37,6 +38,13 @@ function App() {
     e.target.classList.add("selected")
   }
 
+  function handleSubmit(e){
+    e.preventDefault()
+    console.log(e.target.eventName.value)
+    console.log(e.target.eventHour.value)
+    console.log(e.target.eventAdress.value)
+  }
+
   const ROW = []
 
   for(let i=1; i<=31; i++){
@@ -54,6 +62,7 @@ function App() {
       <section className="grid-7 days">
         {ROW}
       </section>
+      <FormCalendar onSubmit={handleSubmit}/>
     </>
   );
 }
