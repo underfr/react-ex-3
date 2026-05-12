@@ -42,3 +42,38 @@ body {
   background-color: orange;
   border-radius: 50%;
 }
+
+.formCalendar {
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 3px;
+}
+.App{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10vw;
+}
+.calendarApp {
+  grid-column: 2;
+  grid-row: 1;
+}
+.formApp{
+  grid-column: 1;
+  grid-row: 1;
+}
+.eventApp{
+  grid-column: span 2;
+  grid-row: 2;
+  margin: auto;
+}
